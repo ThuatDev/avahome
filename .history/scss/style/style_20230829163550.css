@@ -645,27 +645,53 @@ a.see-more:hover {
 .list-project {
   max-width: var(--container-width);
   margin: 0 auto;
-  display: grid; /* sử dụng CSS Grid */
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(359px, 1fr)
-  ); /* tự động tính toán số cột */
-  grid-gap: 12px; /* khoảng cách giữa các phần tử con */
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .list-project .project-item {
+  width: 359px;
+  height: 359px;
   position: relative;
   overflow: hidden;
 }
 
 .list-project .project-item .project-img img {
-  width: 100%;
-  height: 100%;
+  width: calc(100% - 12px);
   object-fit: cover;
   transition: transform 0.6s ease;
 }
 
+.col-3 {
+  /* Dùng hệ lưới trục 12 cột nên lấy flex-parent / 12 */
+  width: calc(3 * 100% / 12);
+  box-sizing: border-box;
+  /* tính toán khoảng cách giữa các ảnh */
+  padding-right: calc((var(--container-width) - (3 * (359px + 12px))) / 2);
+}
+
+.list-project .project-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* tính toán lại width height */
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  padding: 6px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transition: opacity 0.6s ease;
+  opacity: 0;
+}
+
+.list-project .project-item:hover::before {
+  opacity: 1;
+}
+
 .list-project .project-item:hover img {
+  overflow: hidden;
   transform: scale(1.1);
 }
 
@@ -689,36 +715,16 @@ a.see-more:hover {
 }
 
 .list-project .project-item .project-content h6 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 10px;
-
+  font-family: "Roboto", sans-serif;
   color: #ffffff;
-  font-family: "Raleway", sans-serif;
 }
-
 .list-project .project-item .project-content p {
-  font-size: 1.2em;
+  font-size: 1rem;
   line-height: 1.6;
   color: #ffffff;
-  font-family: "Raleway", sans-serif;
-  /* chữ in hoa */
-  text-transform: uppercase;
 }
-
-.list-project .project-item .project-content::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 3px;
-  background-color: #fa4d09;
-  transition: width 0.6s ease;
-}
-
-.list-project .project-item:hover .project-content::before {
-  width: calc(100% - 40px);
-}
+/* css cho 3iem anh  */

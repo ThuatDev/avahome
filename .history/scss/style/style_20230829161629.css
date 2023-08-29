@@ -645,36 +645,34 @@ a.see-more:hover {
 .list-project {
   max-width: var(--container-width);
   margin: 0 auto;
-  display: grid; /* sử dụng CSS Grid */
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(359px, 1fr)
-  ); /* tự động tính toán số cột */
-  grid-gap: 12px; /* khoảng cách giữa các phần tử con */
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.list-project .project-item {
+.project-item {
+  width: 359px;
+  height: 359px;
   position: relative;
   overflow: hidden;
 }
 
-.list-project .project-item .project-img img {
+.project-img {
+  width: 100%;
+  height: 100%;
+}
+
+.project-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.6s ease;
 }
 
-.list-project .project-item:hover img {
-  transform: scale(1.1);
-}
-
-.list-project .project-item .project-content {
+.project-content {
   position: absolute;
   top: 0;
   left: 20px;
   right: 20px;
-
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -682,36 +680,54 @@ a.see-more:hover {
   transition: opacity 0.6s ease;
   z-index: 2;
   padding: 20px;
+  color: #ffffff;
 }
 
-.list-project .project-item:hover .project-content {
-  opacity: 1;
-}
-
-.list-project .project-item .project-content h6 {
+.project-content h6 {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 10px;
-
-  color: #ffffff;
   font-family: "Raleway", sans-serif;
 }
 
-.list-project .project-item .project-content p {
+.project-content p {
   font-size: 1.2em;
   line-height: 1.6;
-  color: #ffffff;
   font-family: "Raleway", sans-serif;
-  /* chữ in hoa */
   text-transform: uppercase;
 }
 
-.list-project .project-item .project-content::before {
+.project-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transition: opacity 0.6s ease;
+  opacity: 0;
+}
+
+.project-item:hover::before {
+  opacity: 1;
+}
+
+.project-item:hover img {
+  transform: scale(1.1);
+}
+
+.project-item:hover .project-content {
+  opacity: 1;
+}
+
+.project-item .project-content::before {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 50%;
+  left: 0;
   transform: translateX(-50%);
   width: 0;
   height: 3px;
@@ -719,6 +735,14 @@ a.see-more:hover {
   transition: width 0.6s ease;
 }
 
-.list-project .project-item:hover .project-content::before {
-  width: calc(100% - 40px);
+.project-item:hover .project-content::before {
+  width: 100%;
+}
+
+.col-3 {
+  /* Dùng hệ lưới trục 12 cột nên lấy flex-parent / 12 */
+  width: calc(3 * 100% / 12);
+  box-sizing: border-box;
+  padding: 12px;
+  /* border: 1px solid blue !important; */
 }

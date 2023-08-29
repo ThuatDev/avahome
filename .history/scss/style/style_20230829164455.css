@@ -642,14 +642,12 @@ a.see-more:hover {
   height: 100%;
   object-fit: cover;
 } */
+
 .list-project {
   max-width: var(--container-width);
   margin: 0 auto;
   display: grid; /* sử dụng CSS Grid */
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(359px, 1fr)
-  ); /* tự động tính toán số cột */
+  grid-template-columns: repeat(3, 1fr); /* ba cột có chiều rộng bằng nhau */
   grid-gap: 12px; /* khoảng cách giữa các phần tử con */
 }
 

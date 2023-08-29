@@ -642,50 +642,39 @@ a.see-more:hover {
   height: 100%;
   object-fit: cover;
 } */
-.list-project {
+..list-project {
   max-width: var(--container-width);
   margin: 0 auto;
-  display: grid; /* sử dụng CSS Grid */
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(359px, 1fr)
-  ); /* tự động tính toán số cột */
-  grid-gap: 12px; /* khoảng cách giữa các phần tử con */
 }
 
 .list-project .project-item {
+  width: 359px;
+  height: 359px;
   position: relative;
   overflow: hidden;
 }
 
-.list-project .project-item .project-img img {
+.list-project .project-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
-}
-
-.list-project .project-item:hover img {
-  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  overflow: hidden;
 }
 
 .list-project .project-item .project-content {
   position: absolute;
   top: 0;
-  left: 20px;
-  right: 20px;
-
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   opacity: 0;
-  transition: opacity 0.6s ease;
-  z-index: 2;
-  padding: 20px;
-}
-
-.list-project .project-item:hover .project-content {
-  opacity: 1;
+  transition: all 0.3s ease;
+  z-index: 2; /* Đẩy lên trên để che phủ phần line */
 }
 
 .list-project .project-item .project-content h6 {
@@ -693,32 +682,43 @@ a.see-more:hover {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 10px;
-
+  font-family: "Roboto", sans-serif;
   color: #ffffff;
-  font-family: "Raleway", sans-serif;
 }
 
 .list-project .project-item .project-content p {
-  font-size: 1.2em;
+  font-size: 1rem;
   line-height: 1.6;
   color: #ffffff;
-  font-family: "Raleway", sans-serif;
-  /* chữ in hoa */
-  text-transform: uppercase;
 }
 
-.list-project .project-item .project-content::before {
+.list-project .project-item .line {
+  width: 80%; /* Độ rộng của đường line */
+  height: 1px;
+  background-color: #000;
+  margin-top: 10px;
+}
+
+.list-project .project-item:hover img {
+  transform: scale(1.1);
+}
+
+.list-project .project-item:hover .project-content {
+  opacity: 1;
+}
+
+.list-project .project-item::before {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 3px;
-  background-color: #fa4d09;
-  transition: width 0.6s ease;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  opacity: 0;
 }
 
-.list-project .project-item:hover .project-content::before {
-  width: calc(100% - 40px);
+.list-project .project-item:hover::before {
+  opacity: 1;
 }

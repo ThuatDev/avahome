@@ -14,7 +14,7 @@
     />
   </head>
   <body>
-    <header class="header">
+    <header>
       <div class="header__container">
         <div class="container-fluid">
           <div class="header__logo">
@@ -216,8 +216,7 @@
               alt="Image 2"
             />
             <div class="image-overlay">
-              <h3><strong>KIẾN TRÚC </strong></h3>
-              <p>THIẾT KẾ NHÀ PHỐ</p>
+              <span>KIẾN TRÚC THIẾT KẾ NHÀ PHỐ</span>
             </div>
           </div>
 
@@ -228,115 +227,12 @@
             />
 
             <div class="image-overlay">
-              <h3>NỘI THẤT</h3>
-              <p>THIẾT KẾ NỘI THẤT</p>
+              <span>NỘI THẤT THIẾT KẾ NỘI THẤT</span>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="skill">
-      <div class="list-skill">
-        <div class="skill-item">
-          <span
-            class="letter-skill"
-            style="opacity: 1; transform: translateY(0px) translateZ(0px)"
-            >S</span
-          ><span
-            class="letter-skill"
-            style="opacity: 1; transform: translateY(0px) translateZ(0px)"
-            >K</span
-          ><span
-            class="letter-skill"
-            style="opacity: 1; transform: translateY(0px) translateZ(0px)"
-            >I</span
-          ><span
-            class="letter-skill"
-            style="opacity: 1; transform: translateY(0px) translateZ(0px)"
-            >L</span
-          ><span
-            class="letter-skill"
-            style="opacity: 1; transform: translateY(0px) translateZ(0px)"
-            >L</span
-          >
-          <span
-            class="letter-skill"
-            style="opacity: 1; transform: translateY(0px) translateZ(0px)"
-            >S</span
-          >
-        </div>
-        <div class="skill-title">
-          <h1>DỰ ÁN <span> BIỆT THỰ HIỆN ĐẠI.</span></h1>
-        </div>
-      </div>
-      <div class="list-project">
-        <div class="project-item col-3">
-          <div class="project-img">
-            <div class="mask-img">
-              <img
-                src="https://avahome.com.vn/wp-content/uploads/2022/08/1-5.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="project-content">
-            <h6>BIỆT THỰ 12X25M ANH HOÀNG – NINH BÌNH</h6>
-            <p>Biệt Thự</p>
-          </div>
-          <!-- tạo đường line ở đây -->
-          <div class="line"></div>
-        </div>
-        <div class="project-item col-3">
-          <div class="project-img">
-            <div class="mask-img">
-              <img
-                src="https://avahome.com.vn/wp-content/uploads/2022/08/1-5.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="project-content">
-            <h6>BIỆT THỰ 12X25M ANH HOÀNG – NINH BÌNH</h6>
-            <p>Biệt Thự</p>
-          </div>
-          <!-- tạo đường line ở đây -->
-          <div class="line"></div>
-        </div>
-        <div class="project-item col-3">
-          <div class="project-img">
-            <div class="mask-img">
-              <img
-                src="https://avahome.com.vn/wp-content/uploads/2022/08/1-5.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="project-content">
-            <h6>BIỆT THỰ 12X25M ANH HOÀNG – NINH BÌNH</h6>
-            <p>Biệt Thự</p>
-          </div>
-          <!-- tạo đường line ở đây -->
-          <div class="line"></div>
-        </div>
-        <div class="project-item col-3">
-          <div class="project-img">
-            <div class="mask-img">
-              <img
-                src="https://avahome.com.vn/wp-content/uploads/2022/08/1-5.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="project-content">
-            <h6>BIỆT THỰ 12X25M ANH HOÀNG – NINH BÌNH</h6>
-            <p>Biệt Thự</p>
-          </div>
-          <!-- tạo đường line ở đây -->
-          <div class="line"></div>
-        </div>
-      </div>
-    </section>
-
     <script>
       // tạo function truyền tham trị
       function myFunction(tt, tt2) {
@@ -401,26 +297,6 @@
         showSlides(slideIndex);
         startAutoSlide();
       });
-
-      // fixxed;
-      // Lấy thẻ header
-      const header = document.querySelector(".header__container");
-
-      // Kích hoạt khi cuộn trang
-      function checkScrollPosition() {
-        if (window.scrollY >= 600) {
-          header.classList.add("sticky");
-          console.log("adđhello");
-        } else {
-          header.classList.remove("sticky");
-        }
-      }
-
-      // Gọi hàm kiểm tra khi tải trang
-      checkScrollPosition();
-
-      // Lắng nghe sự kiện scroll
-      window.addEventListener("scroll", checkScrollPosition);
     </script>
   </body>
 </html>

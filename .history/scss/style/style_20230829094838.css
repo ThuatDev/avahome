@@ -447,19 +447,17 @@ a.see-more:hover {
   background-color: #fa4d09; /* Màu nền khi di chuột qua */
   color: #ffffff; /* Màu chữ khi di chuột qua */
 }
-.content-about-list {
-  position: relative;
+.home-sec-2 {
 }
-
-.home-sec-2-about {
-  height: 475px;
+.home-sec-2 .section-bg-about {
+  position: relative;
 }
 /* css cho  KIẾN TRÚC <span>AVAHOME */
 .section-content .col-inner {
   max-width: var(--container-width);
   margin: 0 auto;
   position: absolute;
-  top: 50%;
+  /* top: 50%; */
   left: 15%;
 }
 
@@ -480,9 +478,9 @@ a.see-more:hover {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-/* .section-content {
+.section-content {
   max-height: 600px;
-} */
+}
 .col-inner {
   padding-bottom: 100px;
 }
@@ -494,231 +492,4 @@ a.see-more:hover {
   line-height: 3;
   text-align: left;
   color: #000000;
-}
-/* css cho 3iem anh  */
-.onhover {
-  display: flex;
-  height: 600px; /* Set the height of the container to 100% of the viewport height */
-  overflow: hidden; /* Hide any content that overflows the container */
-  /* tạo lớp chồng lên  */
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 2;
-}
-
-.sec-3-col {
-  flex: 1; /* Use flex-grow to distribute available space evenly among columns */
-  height: 600px; /* Set the height of the columns to 100% of the container */
-  display: flex;
-  flex-direction: column; /* Arrange content vertically */
-  justify-content: flex-end; /* Align content to the bottom of the column */
-  transition: all 0.5s ease;
-  position: relative;
-}
-
-.sec-3-col img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.onhover .sec-3-col.active {
-  flex: 0 0 33.3%; /* Keep the active column at a fixed width */
-  max-width: 33%;
-}
-
-.onhover .sec-3-col:not(.active) {
-  flex: 1; /* Distribute remaining space among non-active columns */
-  max-width: 33.3%;
-}
-
-.onhover .sec-3-col:hover {
-  flex: 0 0 40%;
-  max-width: 40%;
-  margin-left: -3%; /* Push columns on the left */
-  /* Push columns on the right */
-}
-.image-overlay {
-  position: absolute;
-  /* canh giữa 2 chiều */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 100%;
-  /* background-color: rgba(0, 0, 0, 0.5); */
-  color: #fcfcfc;
-  padding: 10px;
-  transition: all 0.3s ease;
-}
-.image-overlay h3 {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 10px;
-  font-family: "Roboto", sans-serif;
-}
-.image-overlay p {
-  font-size: 1.25rem;
-  line-height: 1.6;
-  color: #fcfcfc;
-}
-
-/* Tạo lớp mặt nạ cho section */
-.header__container {
-  /* display: none; */
-  transition: all 0.3s ease;
-}
-
-.sticky {
-  position: fixed;
-  /* tại sao dùng stcky nó k nhận đc */
-
-  top: 0;
-  left: 0;
-  width: 100%;
-
-  z-index: 1000;
-  /* tạo cảm giác mượt mà khi nó xuất hiện  */
-  background-color: #f1f1f1;
-}
-.sticky .header__menu ul li a {
-  color: #000000;
-}
-
-/* section skiil  */
-.list-skill .skill-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-.letter-skill {
-  display: inline-block; /* Hiển thị theo dạng khối */
-  /* Kích thước chữ */
-  margin-top: 0;
-  font-weight: bold; /* Độ đậm chữ */
-  /* Khoảng cách đối với các chữ cái kế bên nhau */
-  font-size: 13.0225vw;
-  line-height: 1;
-  width: 16%;
-  text-align: center;
-  white-space: nowrap;
-  color: #f1f1f1;
-  font-weight: bold;
-  font-family: "Roboto", sans-serif;
-  box-sizing: border-box;
-}
-.list-skill {
-  position: relative;
-}
-.list-skill .skill-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.list-skill .skill-title h1 {
-  font-size: 3rem;
-
-  line-height: 1.2;
-  margin-bottom: 10px;
-  font-family: "Roboto", sans-serif;
-}
-.list-skill .skill-title h1 span {
-  color: #fa4d09;
-}
-/* css list project  */
-/* .list-project {
-  max-width: var(--container-width);
-  margin: 0 auto;
-}
-.list-project .project-item {
-  width: 359px;
-  height: 359px;
-}
-.list-project .project-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
-.list-project {
-  max-width: var(--container-width);
-  margin: 0 auto;
-  display: grid; /* sử dụng CSS Grid */
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(359px, 1fr)
-  ); /* tự động tính toán số cột */
-  grid-gap: 12px; /* khoảng cách giữa các phần tử con */
-}
-
-.list-project .project-item {
-  position: relative;
-  overflow: hidden;
-}
-
-.list-project .project-item .project-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-
-.list-project .project-item:hover img {
-  transform: scale(1.1);
-}
-
-.list-project .project-item .project-content {
-  position: absolute;
-  top: 0;
-  left: 20px;
-  right: 20px;
-
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  opacity: 0;
-  transition: opacity 0.6s ease;
-  z-index: 2;
-  padding: 20px;
-}
-
-.list-project .project-item:hover .project-content {
-  opacity: 1;
-}
-
-.list-project .project-item .project-content h6 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 10px;
-
-  color: #ffffff;
-  font-family: "Raleway", sans-serif;
-}
-
-.list-project .project-item .project-content p {
-  font-size: 1.2em;
-  line-height: 1.6;
-  color: #ffffff;
-  font-family: "Raleway", sans-serif;
-  /* chữ in hoa */
-  text-transform: uppercase;
-}
-
-.list-project .project-item .project-content::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 3px;
-  background-color: #fa4d09;
-  transition: width 0.6s ease;
-}
-
-.list-project .project-item:hover .project-content::before {
-  width: calc(100% - 40px);
 }
