@@ -28,12 +28,15 @@ img {
   width: 100%;
   max-width: var(--container-width);
   margin: 0 auto;
+  /* padding: 0 15px; */
   display: flex;
+  /* justify-content: space-between; */
   height: 90px;
   border-bottom: 1px solid #8f8a8a;
 }
 .header__logo {
   width: 200px;
+  /* padding-right: 150px; */
   padding-right: 30px;
 }
 .header__logo img {
@@ -50,7 +53,7 @@ img {
   line-height: 1.6;
 }
 .header__menu ul li {
-  padding: 0 32px;
+  padding: 0 30px;
 }
 .header__menu ul li a {
   color: #ffffff;

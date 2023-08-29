@@ -28,12 +28,15 @@ img {
   width: 100%;
   max-width: var(--container-width);
   margin: 0 auto;
+  /* padding: 0 15px; */
   display: flex;
+  /* justify-content: space-between; */
   height: 90px;
   border-bottom: 1px solid #8f8a8a;
 }
 .header__logo {
   width: 200px;
+  /* padding-right: 150px; */
   padding-right: 30px;
 }
 .header__logo img {
@@ -50,7 +53,7 @@ img {
   line-height: 1.6;
 }
 .header__menu ul li {
-  padding: 0 32px;
+  padding: 0 30px;
 }
 .header__menu ul li a {
   color: #ffffff;
@@ -972,22 +975,12 @@ a.see-more:hover {
 
 /* css cho 4 cot price  */
 
-.design-prices .product-row {
-  max-width: var(--container-width);
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-.design-prices .product-col-price {
-  flex: 0 0 25%;
-  max-width: calc(25% - 30px);
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-bottom: 30px;
-}
 .product-col-price {
   max-width: var(--container-width);
+  margin: 0 auto;
+  display: grid; /* sử dụng CSS Grid */
+  grid-template-columns: repeat(4, 1fr); /* ba cột có chiều rộng bằng nhau */
+  grid-gap: 20px; /* khoảng cách giữa các phần tử con */
 }
 .product-inner {
   text-align: center;
@@ -1010,11 +1003,14 @@ a.see-more:hover {
 .product-col-price .product-inner {
   margin-top: 40px;
   border: 1px solid #ebebeb;
-  padding: 0 15px;
-  padding-bottom: 34px;
+  padding: 0 25px;
+  padding-bottom: 30px;
   position: relative;
   z-index: 2;
   transition: all 0.3s ease;
+}
+.product-col-price .product-inner:hover {
+  border: 1px solid #fa4d09;
 }
 
 /* price  */
@@ -1034,194 +1030,8 @@ a.see-more:hover {
   background-color: rgb(250, 77, 9);
   margin: 20px auto;
 }
-.product-col-price .product-inner .product-description-1 p strong {
-  font-size: 1rem;
-
+.product-col-price .product-inner .product-price .product-price__unit {
+  font-size: 1.5rem;
+  color: black;
   font-weight: bold;
-  line-height: 1.6;
-}
-.product-col-price .product-inner .product-description-1 p {
-  font-size: 1rem;
-
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-.product-col-price .product-inner .product-description-1 {
-  margin-bottom: 1rem;
-  /* boder nét đứt  */
-  border-bottom: 2px dashed black;
-}
-.product-col-price .product-inner .product-description-2 p {
-  font-size: 1rem;
-
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-.product-col-price .product-inner .product-button {
-  background-color: #fa4d09;
-  display: inline-block;
-
-  padding: 15px 30px;
-  /* margin-bottom: 2rem; */
-}
-.product-col-price .product-inner .product-button span {
-  display: inline-block;
-  line-height: 1.6;
-  font-size: 16px;
-  /* chữ in hoa  */
-  text-transform: uppercase;
-  color: #ffffff;
-  font-weight: 600;
-}
-/* section working-process  */
-.working-process .working-process-title {
-  background-image: url(https://avahome.com.vn/wp-content/uploads/2021/08/anh-4.jpg);
-
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 300px;
-}
-.working-process {
-  padding-bottom: 60px;
-}
-.working-process .working-process-title h1 {
-  font-size: 3rem;
-
-  line-height: 1.2;
-  margin-bottom: 10px;
-  font-family: "Roboto", sans-serif;
-  color: #ffffff;
-  text-align: center;
-  padding-top: 100px;
-}
-
-/* footer */
-.footer__container {
-  background-color: rgba(40, 40, 40, 1);
-  padding-top: 50px;
-  padding-bottom: 10px;
-}
-.footer__container h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 10px;
-
-  color: #ffffff;
-  /* font-family: "Raleway", sans-serif; */
-}
-.footer__container p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #ccc;
-}
-.footer__bottom p {
-  color: #ccc;
-}
-.footer__container .footer__content {
-  max-width: var(--container-width);
-  margin: 0 auto;
-  display: flex;
-  flex-flow: row wrap;
-  /* sẽ xuống dòng nếu bị tràng   */
-
-  /* xuống hàng ở màn hình nhỏ  */
-
-  justify-content: space-between;
-}
-footer .col-3 {
-  /* Dùng hệ lưới trục 12 cột nên lấy flex-parent / 12 */
-  width: calc(3 * 100% / 12);
-  box-sizing: border-box;
-  padding: 12px;
-  /* border: 1px solid blue !important; */
-}
-.footer__content--left--logo {
-  width: 240px;
-  height: 167px;
-}
-.footer__content--left--logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-/* css row-1  */
-.footer__content .row-1 {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px 0;
-}
-.footer__content .row-1 .footer__content--left--introduce {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px 0;
-}
-.footer__content .row-1 .footer__content--left--icon {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0 30px;
-}
-.footer__content .row-1 .footer__content--left--icon i {
-  font-size: 1.5rem;
-  color: #ffffff;
-}
-/* css row-2  */
-.footer__content .row-2 h3 {
-  margin-bottom: 50px;
-}
-.footer__content .row-2 .footer__content--left--item {
-  padding-left: 40px;
-}
-.footer__content .row-2 p {
-  line-height: 1.6;
-  margin-bottom: 20px;
-
-  padding-right: 10px;
-}
-/* css row-3   */
-.footer__content .row-3 .footer__content--right--item-1 {
-  margin-top: 44px;
-}
-.footer__content .row-3 .footer__content--right--item-1 p {
-  line-height: 1.6;
-  padding: 5px 0;
-}
-/* css row 4  */
-.footer__content .row-4 .footer__content--right--item-2 h3 {
-  margin-bottom: 50px;
-}
-/* css 9img  */
-footer .row-4 .list-img-footer .footer__content--right--item-2--img {
-  width: 100%;
-  height: 100%;
-}
-footer .row-4 .list-img-footer .footer__content--right--item-2--img--item {
-  width: 67px;
-  height: 67px;
-}
-footer .row-4 .list-img-footer .footer__content--right--item-2--img--item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-footer .row-4 .list-img-footer .footer__content--right--item-2--img {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0 20px;
-}
-/* css row 5  */
-footer .footer__bottom {
-}
-footer .footer__bottom .footer__bottom--line {
-  border-bottom: 0.3px solid rgba(255, 255, 255, 0.5);
-  margin-bottom: 10px;
-  margin-top: 60px;
-}
-footer .footer__bottom p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #ffffff;
-  text-align: center;
 }

@@ -28,12 +28,15 @@ img {
   width: 100%;
   max-width: var(--container-width);
   margin: 0 auto;
+  /* padding: 0 15px; */
   display: flex;
+  /* justify-content: space-between; */
   height: 90px;
   border-bottom: 1px solid #8f8a8a;
 }
 .header__logo {
   width: 200px;
+  /* padding-right: 150px; */
   padding-right: 30px;
 }
 .header__logo img {
@@ -50,7 +53,7 @@ img {
   line-height: 1.6;
 }
 .header__menu ul li {
-  padding: 0 32px;
+  padding: 0 30px;
 }
 .header__menu ul li a {
   color: #ffffff;
@@ -1105,30 +1108,23 @@ a.see-more:hover {
 }
 .footer__container h3 {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.2;
   margin-bottom: 10px;
 
   color: #ffffff;
-  /* font-family: "Raleway", sans-serif; */
+  font-family: "Raleway", sans-serif;
 }
 .footer__container p {
   font-size: 1rem;
   line-height: 1.6;
   color: #ccc;
 }
-.footer__bottom p {
-  color: #ccc;
-}
 .footer__container .footer__content {
   max-width: var(--container-width);
   margin: 0 auto;
   display: flex;
-  flex-flow: row wrap;
-  /* sẽ xuống dòng nếu bị tràng   */
-
-  /* xuống hàng ở màn hình nhỏ  */
-
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 footer .col-3 {
@@ -1215,7 +1211,7 @@ footer .row-4 .list-img-footer .footer__content--right--item-2--img {
 footer .footer__bottom {
 }
 footer .footer__bottom .footer__bottom--line {
-  border-bottom: 0.3px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid #ffffff;
   margin-bottom: 10px;
   margin-top: 60px;
 }
