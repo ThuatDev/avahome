@@ -1,0 +1,288 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --container-width: 1080px;
+}
+/* css header */
+.header__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 999;
+}
+
+.container-fluid {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  /* padding: 0 15px; */
+  display: flex;
+  /* justify-content: space-between; */
+  height: 90px;
+  border-bottom: 1px solid #6c6c6c;
+}
+.header__logo {
+  width: 200px;
+  /* padding-right: 150px; */
+  padding-right: 30px;
+}
+.header__logo img {
+  max-height: 90px;
+  display: block;
+}
+.header__menu ul {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-flow: row wrap;
+
+  height: 100%;
+  line-height: 1.6;
+}
+.header__menu ul li {
+  padding: 0 30px;
+}
+.header__menu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+}
+
+/* slider  */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.mySlides img {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  position: relative;
+  display: block;
+}
+.list-dot {
+  position: absolute;
+  bottom: 10%;
+
+  width: 100%;
+  z-index: 999;
+}
+
+.active,
+.dot:hover {
+  background-color: #ffffff;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out; /* Thêm timing function */
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.4;
+    transform: translateX(-100%); /* Bắt đầu từ vị trí bên ngoài màn hình */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Di chuyển vào màn hình */
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+/* css aroww  */
+.arrow-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* .arrow {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+  pointer-events: none;
+}
+
+.arrow a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.mySlides:hover .arrow {
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+} */
+
+.pss-prev {
+  left: 2%;
+  position: absolute;
+  top: 40%;
+  font-size: 25px;
+  position: absolute;
+  cursor: pointer;
+
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  /* cho nó bo tròn xung quanh mũi tên  */
+  /* display: block; */
+  width: 40px;
+  border-radius: 50%;
+  /* background-color: brown; */
+  border: 2px solid #ffffff;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+.pss-prev:hover {
+  background-color: rgba(1, 49, 93, 0.8);
+  opacity: 1;
+}
+.pss-next {
+  right: 2%;
+  top: 40%;
+  font-size: 25px;
+  position: absolute;
+  cursor: pointer;
+
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  /* cho nó bo tròn xung quanh mũi tên  */
+  /* display: block; */
+  width: 40px;
+  border-radius: 50%;
+  /* background-color: brown; */
+  border: 2px solid #ffffff;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+.pss-next:hover {
+  background-color: rgba(1, 49, 93, 0.8);
+  opacity: 1;
+}
+/* khi hover vào thẻ cha thì thẻ con sẽ hiện ra */
+.slideshow-container:hover .pss-prev,
+.slideshow-container:hover .pss-next {
+  opacity: 1;
+}
+
+/* css content3 iitem */
+
+.onhover .sec-3-col.active {
+  max-width: 40%;
+  -ms-flex-preferred-size: 40%;
+  flex-basis: 40%;
+}
+
+.onhover .sec-3-col:not(.active) {
+  max-width: 30%;
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+}
+
+.row.row-collapse.row-full-width.align-equal.sec-3-row:hover .sec-3-col {
+  transition: all 0.3s ease-in-out;
+}
+
+.row.row-collapse.row-full-width.align-equal.sec-3-row:hover .sec-3-col.active {
+  max-width: 40%;
+  -ms-flex-preferred-size: 40%;
+  flex-basis: 40%;
+}
+
+.row.row-collapse.row-full-width.align-equal.sec-3-row:hover
+  .sec-3-col:not(.active) {
+  max-width: 30%;
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+}
+
+.row.row-collapse.row-full-width.align-equal.sec-3-row:hover .banner-bg {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.row.row-collapse.row-full-width.align-equal.sec-3-row:hover
+  .sec-3-col:hover
+  .banner-bg {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+#banner-1637885546 {
+  padding-top: 80vh;
+}
+#banner-1637885546 .bg.bg-loaded {
+  background-image: url(https://avahome.com.vn/wp-content/uploads/2022/08/1-5.jpg);
+}
+#banner-1637885546 .overlay {
+  background-color: rgba(0, 0, 0, 0.355);
+}
+#text-box-2138144965 {
+  width: 93%;
+}
+#text-box-2138144965 .text {
+  font-size: 100%;
+}
+@media (min-width: 550px) {
+  #text-box-2138144965 {
+    width: 66%;
+  }
+}
+#text-box-1122198304 {
+  width: 99%;
+}
+#text-box-1122198304 .text {
+  font-size: 100%;
+}
+@media (min-width: 550px) {
+  #text-box-1122198304 {
+    width: 62%;
+  }
+}
+#text-box-1122198304 {
+  width: 99%;
+}
+#text-box-1122198304 .text {
+  font-size: 100%;
+}
+@media (min-width: 550px) {
+  #text-box-1122198304 {
+    width: 62%;
+  }
+}

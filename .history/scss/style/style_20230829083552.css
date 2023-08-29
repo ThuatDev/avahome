@@ -1,0 +1,431 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --container-width: 1080px;
+}
+img {
+  display: block;
+}
+/* css header */
+.header__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 999;
+}
+
+.container-fluid {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  /* padding: 0 15px; */
+  display: flex;
+  /* justify-content: space-between; */
+  height: 90px;
+  border-bottom: 1px solid #8f8a8a;
+}
+.header__logo {
+  width: 200px;
+  /* padding-right: 150px; */
+  padding-right: 30px;
+}
+.header__logo img {
+  max-height: 90px;
+  display: block;
+}
+.header__menu ul {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-flow: row wrap;
+
+  height: 100%;
+  line-height: 1.6;
+}
+.header__menu ul li {
+  padding: 0 30px;
+}
+.header__menu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+}
+.header__menu ul li a:hover {
+  color: #fa4d09;
+}
+/* submenu  */
+.header__menu #sub-menu-parent-1 {
+  position: relative;
+}
+.header__menu #sub-menu-parent-1 .sub-menu-1 {
+  margin-top: 10px;
+  position: absolute;
+  top: 100%;
+  left: 3px;
+  width: 220px;
+  height: auto;
+  background-color: #ffffff;
+  padding: 15px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+.header__menu #sub-menu-parent-1 .sub-menu-1 li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #ebebeb;
+  list-style: none;
+  text-align: left;
+}
+.header__menu #sub-menu-parent-1 .sub-menu-1 li:last-child {
+  border-bottom: none;
+}
+.header__menu #sub-menu-parent-1 .sub-menu-1 li a {
+  color: #888787;
+}
+/* khi hover vào thẻ cha thì thẻ con sẽ hiện ra */
+.header__menu #sub-menu-parent-1:hover .sub-menu-1 {
+  display: block;
+}
+/* css để có 1 tam giác nối vs thẻ cha và con  */
+.header__menu #sub-menu-parent-1 .sub-menu-1::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 45px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  border-bottom: 10px solid #ffffff;
+}
+.header__menu #sub-menu-parent-1 .sub-menu-1 li a:hover {
+  color: #fa4d09;
+}
+/* css input search  */
+.header__menu ul li:last-child {
+  padding: 0;
+
+  padding-top: 5px;
+  position: relative;
+}
+.header__menu ul li:last-child a i {
+  font-size: 1.1rem;
+}
+.header__menu ul li:last-child .search-box {
+  position: absolute;
+  top: 100%;
+  right: -16px;
+  width: 260px;
+  height: auto;
+  background-color: #ffffff;
+  padding: 20px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 4px;
+  display: none;
+}
+/* tạo tam giác nối vs thẻ cha và con  */
+.header__menu ul li:last-child .search-box::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  border-bottom: 10px solid #ffffff;
+}
+/* cho ô input và icon search nằm cạnh nhau  cung 1 hàng  */
+.header__menu ul li:last-child .search-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__menu ul li:last-child .search-box input[type="submit"] {
+  color: #ffffff;
+  border: none;
+  padding: 0 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.header__menu ul li:last-child .search-box i {
+  height: 30px;
+  width: 30px;
+  /* width: 40px; */
+  font-size: 1.1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888787;
+  cursor: pointer;
+}
+.header__menu ul li:last-child .search-box button {
+  height: 39px;
+  width: 48px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888787;
+  cursor: pointer;
+  border: none;
+  background-color: #c74b1a;
+}
+.header__menu ul li:last-child .search-box button i {
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+.header__menu ul li:last-child .search-box input {
+  width: 100%;
+  height: 38px;
+  border: 1px solid #ebebeb;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 0 10px;
+}
+
+.header__menu ul li:last-child .search-box input:focus {
+}
+/* khi hover vào thẻ cha thì thẻ con sẽ hiện ra */
+.header__menu ul li:last-child:hover .search-box {
+  display: block;
+}
+/* slider  */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.mySlides img {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  position: relative;
+  display: block;
+}
+.list-dot {
+  position: absolute;
+  bottom: 10%;
+
+  width: 100%;
+  z-index: 999;
+}
+
+.active,
+.dot:hover {
+  background-color: #ffffff;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out; /* Thêm timing function */
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.4;
+    transform: translateX(-100%); /* Bắt đầu từ vị trí bên ngoài màn hình */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Di chuyển vào màn hình */
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+/* css aroww  */
+.arrow-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.content-img {
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.content-img-item2 {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.content-img h1 {
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+}
+/* css cho content trong img  */
+.btn-see-more {
+  /* ngăn chặn sự tràn ra ngoài của nội dung  */
+
+  text-align: center;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 700;
+  /* font-family: "Raleway", sans-serif; */
+  text-transform: uppercase;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-see-more:hover {
+  background-color: #fa4d09;
+  color: #ffffff;
+}
+.pss-prev {
+  left: 2%;
+  position: absolute;
+  top: 40%;
+  font-size: 25px;
+  position: absolute;
+  cursor: pointer;
+
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  /* cho nó bo tròn xung quanh mũi tên  */
+  /* display: block; */
+  width: 40px;
+  border-radius: 50%;
+  /* background-color: brown; */
+  border: 2px solid #ffffff;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+.pss-prev:hover {
+  background-color: rgba(1, 49, 93, 0.8);
+  opacity: 1;
+}
+.pss-next {
+  right: 2%;
+  top: 40%;
+  font-size: 25px;
+  position: absolute;
+  cursor: pointer;
+
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  /* cho nó bo tròn xung quanh mũi tên  */
+  /* display: block; */
+  width: 40px;
+  border-radius: 50%;
+  /* background-color: brown; */
+  border: 2px solid #ffffff;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+.pss-next:hover {
+  background-color: rgba(1, 49, 93, 0.8);
+  opacity: 1;
+}
+/* khi hover vào thẻ cha thì thẻ con sẽ hiện ra */
+.slideshow-container:hover .pss-prev,
+.slideshow-container:hover .pss-next {
+  opacity: 1;
+}
+
+/* css content3 iitem */
+
+/* fix code  */
+/* Áp dụng kiểu cho section chứa các phần tử */
+.section.home-sec-2 {
+  background-color: #ffffff; /* Màu nền của phần tử section */
+}
+
+/* Áp dụng kiểu cho phần tử chứa background */
+.bg.section-bg.fill.bg-fill.bg-loaded {
+  background-size: cover; /* Kích thước ảnh nền sẽ đậy khung background */
+  background-repeat: no-repeat; /* Không lặp lại ảnh nền */
+  background-position: center center; /* Vị trí trung tâm của ảnh nền */
+  /* Có thể có các thuộc tính khác liên quan đến background */
+}
+
+/* Áp dụng kiểu cho chữ cái trong phần tử span có class "letter" */
+.letter {
+  display: inline-block; /* Hiển thị theo dạng khối */
+  /* Kích thước chữ */
+  margin-top: 0;
+  font-weight: bold; /* Độ đậm chữ */
+  /* Khoảng cách đối với các chữ cái kế bên nhau */
+  font-size: 13.0225vw;
+  line-height: 1.2;
+  width: 20%;
+  text-align: center;
+  white-space: nowrap;
+  color: #f1f1f1;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Áp dụng kiểu cho phần tử p có class "uppercase why" */
+p.uppercase.why {
+  text-transform: uppercase; /* Chuyển đổi chữ thành chữ in hoa */
+  color: #000000; /* Màu chữ */
+  font-size: 100%; /* Kích thước chữ */
+}
+
+/* Áp dụng kiểu cho phần tử p bình thường */
+p {
+  font-size: 18px; /* Kích thước chữ */
+  color: #333333; /* Màu chữ */
+}
+
+/* Áp dụng kiểu cho liên kết a có class "button primary is-outline is-larger" */
+a.button.primary.is-outline.is-larger {
+  display: inline-block; /* Hiển thị theo dạng khối */
+  padding: 10px 20px; /* Khoảng cách padding xung quanh nút */
+  background-color: transparent; /* Màu nền trong suốt */
+  border: 2px solid #fa4d09; /* Đường viền kẻ quanh nút */
+  color: #fa4d09; /* Màu chữ */
+  text-decoration: none; /* Không gạch chân liên kết */
+  font-weight: bold; /* Độ đậm chữ */
+  border-radius: 5px; /* Độ cong viền */
+  transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi màu nền và chữ */
+}
+
+/* Hiệu ứng khi di chuột qua nút */
+a.button.primary.is-outline.is-larger:hover {
+  background-color: #fa4d09; /* Màu nền khi di chuột qua */
+  color: #ffffff; /* Màu chữ khi di chuột qua */
+}

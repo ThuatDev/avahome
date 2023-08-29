@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./scss/./style/style.css" />
+    <link rel="stylesheet" href="./scss/./style/reset.css" />
+    <!-- import  awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-5qQVFQyvQ3..."
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header__container">
+        <div class="container-fluid">
+          <div class="header__logo">
+            <a href="./index.html">
+              <img src="./assets/images/logo.png" alt="" />
+              <img
+                src="./assets/images/logostiky.png"
+                alt=""
+                style="display: none"
+              />
+            </a>
+          </div>
+          <div class="header__menu">
+            <ul>
+              <li><a href="./index.html">Trang chủ</a></li>
+              <li><a href="./about.html">Giới thiệu</a></li>
+              <li
+                id="menu-item-504"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-504 menu-item-design-default has-dropdown"
+              >
+                <a href="https://avahome.com.vn/du-an/" class="nav-top-link"
+                  >Dự án<i class="icon-angle-down"></i
+                ></a>
+                <ul
+                  class="sub-menu nav-dropdown nav-dropdown-default"
+                  style="display: none"
+                >
+                  <li
+                    id="menu-item-402"
+                    class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-402"
+                  >
+                    <a href="https://avahome.com.vn/biet-thu/">Biệt Thự</a>
+                  </li>
+                  <li
+                    id="menu-item-400"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-400"
+                  >
+                    <a href="https://avahome.com.vn/nha-pho/">Nhà Phố</a>
+                  </li>
+                  <li
+                    id="menu-item-401"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-401"
+                  >
+                    <a href="https://avahome.com.vn/noi-that/">Nội Thất</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="https://avahome.com.vn/cong-trinh-thuc-te/"
+                  class="nav-top-link"
+                  >Công trình thực tế</a
+                >
+              </li>
+              <li>
+                <a href="https://avahome.com.vn/bang-gia/" class="nav-top-link"
+                  >Bảng giá</a
+                >
+              </li>
+              <li>
+                <a href="https://avahome.com.vn/lien-he/" class="nav-top-link"
+                  >Liên hệ</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- css côp -->
+    </header>
+    <div class="slideshow-container">
+      <!-- Slides content... -->
+      <div class="mySlides fade">
+        <img
+          src="https://images.unsplash.com/photo-1691950202275-05b7c7ee9af3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
+          style="width: 100%"
+        />
+        <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img
+          src="https://images.unsplash.com/photo-1692639969478-a0dad77774c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          style="width: 100%"
+        />
+      </div>
+
+      <div class="mySlides fade">
+        <img
+          src="https://images.unsplash.com/photo-1682695795798-1b31ea040caf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          style="width: 100%"
+        />
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <br />
+
+    <div class="list-dot" style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <script>
+      let slideIndex = 1;
+      let slideInterval;
+
+      function autoSlide() {
+        plusSlides(1);
+      }
+
+      function startAutoSlide() {
+        slideInterval = setInterval(autoSlide, 9000); // Auto slide every 3 seconds
+      }
+
+      function stopAutoSlide() {
+        clearInterval(slideInterval);
+      }
+
+      function plusSlides(n) {
+        stopAutoSlide();
+        showSlides((slideIndex += n));
+        startAutoSlide();
+      }
+
+      function currentSlide(n) {
+        stopAutoSlide();
+        showSlides((slideIndex = n));
+        startAutoSlide();
+      }
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+          slides[i].classList.remove(
+            "fade"
+          ); /* Xóa class "fade" trước khi ẩn slide */
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        slides[slideIndex - 1].classList.add(
+          "fade"
+        ); /* Thêm class "fade" khi hiển thị slide */
+        dots[slideIndex - 1].className += " active";
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        showSlides(slideIndex);
+        startAutoSlide();
+      });
+    </script>
+  </body>
+</html>

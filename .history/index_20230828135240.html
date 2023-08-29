@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./scss/./style/style.css" />
+    <link rel="stylesheet" href="./scss/./style/reset.css" />
+    <!-- import  awesome  -->
+  </head>
+  <body>
+    <header>
+      <div class="header__container">
+        <div class="container-fluid">
+          <div class="header__logo">
+            <a href="./index.html">Logo</a>
+          </div>
+          <div class="header__menu">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- css côp -->
+      <div
+        class="header-inner flex-row container logo-left medium-logo-center"
+        role="navigation"
+      >
+        <!-- Logo -->
+        <div id="logo" class="flex-col logo">
+          <!-- Header logo -->
+          <a
+            href="https://avahome.com.vn/"
+            title="Avahome - Thiết kế Kiến Trúc Nhà Hiện Đại Top đầu HN !"
+            rel="home"
+          >
+            <img
+              width="200"
+              height="90"
+              src="http://avahome.com.vn/wp-content/uploads/2021/07/logo.png"
+              class="header-logo-sticky"
+              alt="Avahome" /><img
+              width="200"
+              height="90"
+              src="http://avahome.com.vn/wp-content/uploads/2021/07/MAU-AM-BAN.png"
+              class="header_logo header-logo"
+              alt="Avahome" /><img
+              width="200"
+              height="90"
+              src="http://avahome.com.vn/wp-content/uploads/2021/07/MAU-AM-BAN.png"
+              class="header-logo-dark"
+              alt="Avahome"
+          /></a>
+        </div>
+
+        <!-- Mobile Left Elements -->
+        <div class="flex-col show-for-medium flex-left">
+          <ul class="mobile-nav nav nav-left">
+            <li class="nav-icon has-icon">
+              <a
+                href="#"
+                data-open="#main-menu"
+                data-pos="left"
+                data-bg="main-menu-overlay"
+                data-color=""
+                class="is-small"
+                aria-label="Menu"
+                aria-controls="main-menu"
+                aria-expanded="false"
+              >
+                <i class="icon-menu"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Left Elements -->
+        <div class="flex-col hide-for-medium flex-left flex-grow">
+          <ul class="header-nav header-nav-main nav nav-left nav-uppercase">
+            <li
+              id="menu-item-511"
+              class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-511 active menu-item-design-default"
+            >
+              <a
+                href="https://avahome.com.vn/"
+                aria-current="page"
+                class="nav-top-link"
+                >Trang chủ</a
+              >
+            </li>
+            <li
+              id="menu-item-77"
+              class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77 menu-item-design-default"
+            >
+              <a href="https://avahome.com.vn/gioi-thieu/" class="nav-top-link"
+                >Giới thiệu</a
+              >
+            </li>
+            <li
+              id="menu-item-504"
+              class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-504 menu-item-design-default has-dropdown"
+            >
+              <a href="https://avahome.com.vn/du-an/" class="nav-top-link"
+                >Dự án<i class="icon-angle-down"></i
+              ></a>
+              <ul class="sub-menu nav-dropdown nav-dropdown-default" style="">
+                <li
+                  id="menu-item-402"
+                  class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-402"
+                >
+                  <a href="https://avahome.com.vn/biet-thu/">Biệt Thự</a>
+                </li>
+                <li
+                  id="menu-item-400"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-400"
+                >
+                  <a href="https://avahome.com.vn/nha-pho/">Nhà Phố</a>
+                </li>
+                <li
+                  id="menu-item-401"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-401"
+                >
+                  <a href="https://avahome.com.vn/noi-that/">Nội Thất</a>
+                </li>
+              </ul>
+            </li>
+            <li
+              id="menu-item-75"
+              class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75 menu-item-design-default"
+            >
+              <a
+                href="https://avahome.com.vn/cong-trinh-thuc-te/"
+                class="nav-top-link"
+                >Công trình thực tế</a
+              >
+            </li>
+            <li
+              id="menu-item-74"
+              class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74 menu-item-design-default"
+            >
+              <a href="https://avahome.com.vn/bang-gia/" class="nav-top-link"
+                >Bảng giá</a
+              >
+            </li>
+            <li
+              id="menu-item-73"
+              class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73 menu-item-design-default"
+            >
+              <a href="https://avahome.com.vn/lien-he/" class="nav-top-link"
+                >Liên hệ</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Elements -->
+        <div class="flex-col hide-for-medium flex-right">
+          <ul class="header-nav header-nav-main nav nav-right nav-uppercase">
+            <li
+              class="header-search header-search-dropdown has-icon has-dropdown menu-item-has-children"
+            >
+              <a href="#" aria-label="Search" class="is-small"
+                ><i class="icon-search"></i
+              ></a>
+              <ul class="nav-dropdown nav-dropdown-default" style="">
+                <li
+                  class="header-search-form search-form html relative has-icon"
+                >
+                  <div class="header-search-form-wrapper">
+                    <div
+                      class="searchform-wrapper ux-search-box relative is-normal"
+                    >
+                      <form
+                        method="get"
+                        class="searchform"
+                        action="https://avahome.com.vn/"
+                        role="search"
+                      >
+                        <div class="flex-row relative">
+                          <div class="flex-col flex-grow">
+                            <input
+                              type="search"
+                              class="search-field mb-0"
+                              name="s"
+                              value=""
+                              id="s"
+                              placeholder="Search…"
+                              autocomplete="off"
+                            />
+                          </div>
+                          <div class="flex-col">
+                            <button
+                              type="submit"
+                              class="ux-search-submit submit-button secondary button icon mb-0"
+                              aria-label="Submit"
+                            >
+                              <i class="icon-search"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="live-search-results text-left z-top">
+                          <div
+                            class="autocomplete-suggestions"
+                            style="
+                              position: absolute;
+                              display: none;
+                              max-height: 300px;
+                              z-index: 9999;
+                            "
+                          ></div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Right Elements -->
+        <div class="flex-col show-for-medium flex-right">
+          <ul class="mobile-nav nav nav-right"></ul>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

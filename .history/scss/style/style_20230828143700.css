@@ -1,0 +1,139 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --container-width: 1080px;
+}
+/* css header */
+.container-fluid {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  /* padding: 0 15px; */
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+}
+.header__logo {
+  width: 200px;
+  /* padding-right: 150px; */
+}
+/* .header__logo img {
+  max-height: 90px;
+  display: block;
+}
+.header__menu ul {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-flow: row wrap;
+  height: 100%;
+  line-height: 1.6;
+}
+.header__menu ul li {
+  padding: 0 30px;
+}
+.header__menu ul li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+
+} */
+/* Reset some default styles */
+body,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Header styling */
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.header__logo img {
+  height: auto;
+  max-width: 100%;
+}
+
+.header__menu ul {
+  display: flex;
+  align-items: center;
+}
+
+.header__menu li {
+  margin-right: 20px;
+}
+
+.header__menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.header__menu a:hover {
+  color: #ff5733;
+}
+
+/* Dropdown menu */
+.header__menu .has-dropdown:hover .sub-menu {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  min-width: 200px;
+  z-index: 1;
+}
+
+.header__menu .sub-menu li {
+  margin: 10px 0;
+}
+
+.header__menu .sub-menu a {
+  color: #333;
+  font-weight: normal;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .header__container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .header__menu {
+    margin-top: 10px;
+  }
+
+  .header__menu ul {
+    flex-direction: column;
+  }
+
+  .header__menu li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .header__menu .has-dropdown:hover .sub-menu {
+    position: static;
+    box-shadow: none;
+    padding: 0;
+    background-color: transparent;
+    min-width: auto;
+    z-index: 0;
+  }
+}

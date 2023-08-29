@@ -1,0 +1,13 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --container-width: 1080px;
+}
+
+.container-fluid {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 15px;
+}

@@ -1,0 +1,29 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --container-width: 1080px;
+}
+/* css header */
+.container-fluid {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  height: 90px;
+}
+.header__logo {
+  width: 200px;
+  /* padding-right: 150px; */
+}
+.header__logo img {
+  max-height: 90px;
+  display: block;
+}
+.header__menu ul {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
