@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./scss/./style/style.css" />
+    <link rel="stylesheet" href="./scss/./style/reset.css" />
+    <!-- import  awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-5qQVFQyvQ3..."
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="container-fluid">
+          <div class="header__logo">
+            <a href="./index.html">
+              <img src="./assets/images/logo.png" alt="" />
+              <img
+                src="./assets/images/logostiky.png"
+                alt=""
+                style="display: none"
+              />
+            </a>
+          </div>
+          <div class="header__menu">
+            <ul>
+              <li><a href="./index.html">Trang chủ</a></li>
+              <li><a href="./about.html">Giới thiệu</a></li>
+              <li id="sub-menu-parent-1" class="">
+                <a href="https://avahome.com.vn/du-an/" class="nav-top-link"
+                  >Dự án <i class="fas fa-chevron-down"></i
+                ></a>
+
+                <ul class="sub-menu-1 nav-dropdown nav-dropdown-default">
+                  <li
+                    id="menu-item-402"
+                    class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-402"
+                  >
+                    <a href="https://avahome.com.vn/biet-thu/">Biệt Thự</a>
+                  </li>
+                  <li
+                    id="menu-item-400"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-400"
+                  >
+                    <a href="https://avahome.com.vn/nha-pho/">Nhà Phố</a>
+                  </li>
+                  <li
+                    id="menu-item-401"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-401"
+                  >
+                    <a href="https://avahome.com.vn/noi-that/">Nội Thất</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="https://avahome.com.vn/cong-trinh-thuc-te/"
+                  class="nav-top-link"
+                  >Công trình thực tế</a
+                >
+              </li>
+              <li>
+                <a href="https://avahome.com.vn/bang-gia/" class="nav-top-link"
+                  >Bảng giá</a
+                >
+              </li>
+              <li>
+                <a href="https://avahome.com.vn/lien-he/" class="nav-top-link"
+                  >Liên hệ</a
+                >
+              </li>
+              <li>
+                <!-- icon search -->
+                <a href="javascript:void(0)" class="nav-top-link"
+                  ><i class="fas fa-search"> </i
+                ></a>
+                <!-- tạo form search -->
+                <div class="search-box">
+                  <form action="" class="search-form">
+                    <input type="text" placeholder="Search..." />
+                    <button type="submit">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </form>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- css côp -->
+    </header>
+    <div class="slideshow-container">
+      <!-- Slides content... -->
+      <div class="mySlides fade">
+        <img
+          src="https://avahome.com.vn/wp-content/uploads/2022/08/b16fdd150671629.62fe3c0c212b2.jpg"
+          style="width: 100%"
+        />
+        <div class="content-img">
+          <button class="btn btn-see-more fade">Xem Thêm</button>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <img
+          src="https://avahome.com.vn/wp-content/uploads/2021/10/KT-1.jpg"
+          style="width: 100%"
+        />
+        <div class="content-img content-img-item2">
+          <h1>BIỆT THỰ</h1>
+          <button class="btn btn-see-more fade">Xem Thêm</button>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <img
+          src="https://avahome.com.vn/wp-content/uploads/2022/03/3-3.jpg"
+          style="width: 100%"
+        />
+        <div class="content-img content-img-item2">
+          <h1>NHÀ PHỐ</h1>
+          <button class="btn btn-see-more fade">Xem Thêm</button>
+        </div>
+      </div>
+
+      <a class="prev pss-prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next pss-next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <br />
+
+    <div class="list-dot" style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <!-- ABOUT  -->
+    <section class="section home-sec-2-about" id="section_1037986471">
+      <div class="content-about-list">
+        <div class="bg section-bg-about fill bg-fill bg-loaded">
+          <span
+            class="letter"
+            style="opacity: 1; transform: translateY(0px) translateZ(0px)"
+            >A</span
+          ><span
+            class="letter"
+            style="opacity: 1; transform: translateY(0px) translateZ(0px)"
+            >B</span
+          ><span
+            class="letter"
+            style="opacity: 1; transform: translateY(0px) translateZ(0px)"
+            >O</span
+          ><span
+            class="letter"
+            style="opacity: 1; transform: translateY(0px) translateZ(0px)"
+            >U</span
+          ><span
+            class="letter"
+            style="opacity: 1; transform: translateY(0px) translateZ(0px)"
+            >T</span
+          >
+        </div>
+
+        <div class="section-content relative">
+          <div class="row" id="row-1361414089">
+            <div id="col-827158035" class="col small-12 large-12">
+              <div class="col-inner">
+                <div id="text-505024302" class="text">
+                  <p class="uppercase why">
+                    <span>KIẾN TRÚC <span class="avahome">AVAHOME</span></span>
+                  </p>
+                  <p class="content-ava">
+                    ĐƠN VỊ THIẾT KẾ KIẾN TRÚC VÀ XÂY DỰNG HÀNG ĐẦU CỦA XU HƯỚNG
+                    KIẾN TRÚC HIỆN ĐẠI
+                  </p>
+                </div>
+
+                <a
+                  href="https://avahome.com.vn/du-an/"
+                  target="_self"
+                  class="button see-more"
+                >
+                  <span>Xem thêm</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 3item:img -->
+    <section class="img-flex">
+      <!-- lớp mặt nạ cho ảnh -->
+      <div class="mask">
+        <div class="onhover">
+          <div class="sec-3-col active">
+            <img
+              src="https://avahome.com.vn/wp-content/uploads/2022/08/1-5.jpg"
+              alt="Image 1"
+            />
+            <div class="image-overlay">
+              <h3><strong>CÔNG TRÌNH </strong></h3>
+
+              <p>THIẾT KẾ BIỆT THỰ</p>
+            </div>
+          </div>
+
+          <div class="sec-3-col">
+            <img
+              src="https://avahome.com.vn/wp-content/uploads/2022/03/1-2-1024x768.jpg"
+              alt="Image 2"
+            />
+            <div class="image-overlay">
+              <h3><strong>KIẾN TRÚC </strong></h3>
+              <p>THIẾT KẾ NHÀ PHỐ</p>
+            </div>
+          </div>
+
+          <div class="sec-3-col">
+            <img
+              src="https://avahome.com.vn/wp-content/uploads/2021/08/NT-1-1024x676.jpg"
+              alt="Image 3"
+            />
+
+            <div class="image-overlay">
+              <h3>NỘI THẤT</h3>
+              <p>THIẾT KẾ NỘI THẤT</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="skill">
+      <div class="list-skill">
+        <div class="skill-item">
+          <span
+            class="letter-skill"
+            style="opacity: 1; transform: translateY(0px) translateZ(0px)"
+            >S</span
+          ><span
+            class="letter-skill"
+            style="opacity: 1; transform: translateY(0px) translateZ(0px)"
+            >K</span
+          ><span
+            class="letter-skill"
+            style="opacity: 1; transform: translateY(0px) translateZ(0px)"
+            >I</span
+          ><span
+            class="letter-skill"
+            style="opacity: 1; transform: translateY(0px) translateZ(0px)"
+            >L</span
+          ><span
+            class="letter-skill"
+            style="opacity: 1; transform: translateY(0px) translateZ(0px)"
+            >L</span
+          >
+          <span
+            class="letter-skill"
+            style="opacity: 1; transform: translateY(0px) translateZ(0px)"
+            >S</span
+          >
+        </div>
+        <div class="skill-title">
+          <h1>DỰ ÁN <span> BIỆT THỰ HIỆN ĐẠI.</span></h1>
+        </div>
+      </div>
+      <div class="list-project">
+        <!-- liist project -->
+
+        <div class="project-item col-3">
+          <div class="project-img">
+            <div class="mask-img">
+              <img
+                src="https://avahome.com.vn/wp-content/uploads/2022/08/1-5.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="project-content">
+            <h6>BIỆT THỰ 12X25M ANH HOÀNG – NINH BÌNH</h6>
+            <p>Biệt Thự</p>
+          </div>
+          <!-- tạo đường line ở đây -->
+          <div class="line"></div>
+        </div>
+        <div class="project-item col-3">
+          <div class="project-img">
+            <div class="mask-img">
+              <img
+                src="https://avahome.com.vn/wp-content/uploads/2022/05/1-1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="project-content">
+            <h6>BIỆT THỰ 15X10M HIỆN ĐẠI – ANH VIỆT</h6>
+            <p>Biệt Thự</p>
+          </div>
+          <!-- tạo đường line ở đây -->
+          <div class="line"></div>
+        </div>
+        <div class="project-item col-3">
+          <div class="project-img">
+            <div class="mask-img">
+              <img
+                src="https://avahome.com.vn/wp-content/uploads/2022/03/4-1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="project-content">
+            <h6>BIỆT THỰ TÂN CỔ 7X16M – CHÚ HOÀN</h6>
+            <p>Biệt Thự</p>
+          </div>
+          <!-- tạo đường line ở đây -->
+          <div class="line"></div>
+        </div>
+        <!-- 4  -->
+        <div class="project-item col-3">
+          <div class="project-img">
+            <div class="mask-img">
+              <img
+                src="https://avahome.com.vn/wp-content/uploads/2023/03/1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="project-content">
+            <h6>BIỆT THỰ 12X25M ANH HOÀNG – NINH BÌNH</h6>
+            <p>Biệt Thự</p>
+          </div>
+          <!-- tạo đường line ở đây -->
+          <div class="line"></div>
+        </div>
+        <!-- 5  -->
+        <div class="project-item col-3">
+          <div class="project-img">
+            <div class="mask-img">
+              <img
+                src="https://avahome.com.vn/wp-content/uploads/2021/12/1-2.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="project-content">
+            <h6>BIỆT THỰ 12X25M ANH HOÀNG – NINH BÌNH</h6>
+            <p>Biệt Thự</p>
+          </div>
+          <!-- tạo đường line ở đây -->
+          <div class="line"></div>
+        </div>
+        <!-- 6 -->
+        <div class="project-item col-3">
+          <div class="project-img">
+            <div class="mask-img">
+              <img
+                src="https://avahome.com.vn/wp-content/uploads/2021/10/KT-1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="project-content">
+            <h6>BIỆT THỰ 12X25M ANH HOÀNG – NINH BÌNH</h6>
+            <p>Biệt Thự</p>
+          </div>
+          <!-- tạo đường line ở đây -->
+          <div class="line"></div>
+        </div>
+        <!-- 7 -->
+        <div class="project-item col-3">
+          <div class="project-img">
+            <div class="mask-img">
+              <img
+                src="https://avahome.com.vn/wp-content/uploads/2021/08/A-3-1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="project-content">
+            <h6>BIỆT THỰ 12X25M ANH HOÀNG – NINH BÌNH</h6>
+            <p>Biệt Thự</p>
+          </div>
+          <!-- tạo đường line ở đây -->
+          <div class="line"></div>
+        </div>
+
+        <!-- end  -->
+        <div class="project-item col-3">
+          <div class="project-img">
+            <div class="mask-img">
+              <img
+                src="https://avahome.com.vn/wp-content/uploads/2022/08/1-5.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="project-content">
+            <h6>BIỆT THỰ 12X25M ANH HOÀNG – NINH BÌNH</h6>
+            <p>Biệt Thự</p>
+          </div>
+          <!-- tạo đường line ở đây -->
+          <div class="line"></div>
+        </div>
+        <div class="project-item col-3">
+          <div class="project-img">
+            <div class="mask-img">
+              <img
+                src="https://avahome.com.vn/wp-content/uploads/2022/05/1-1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="project-content">
+            <h6>BIỆT THỰ 15X10M HIỆN ĐẠI – ANH VIỆT</h6>
+            <p>Biệt Thự</p>
+          </div>
+          <!-- tạo đường line ở đây -->
+          <div class="line"></div>
+        </div>
+        <div class="project-item col-3">
+          <div class="project-img">
+            <div class="mask-img">
+              <img
+                src="https://avahome.com.vn/wp-content/uploads/2022/03/4-1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="project-content">
+            <h6>BIỆT THỰ TÂN CỔ 7X16M – CHÚ HOÀN</h6>
+            <p>Biệt Thự</p>
+          </div>
+          <!-- tạo đường line ở đây -->
+          <div class="line"></div>
+        </div>
+        <!-- 4  -->
+        <div class="project-item col-3">
+          <div class="project-img">
+            <div class="mask-img">
+              <img
+                src="https://avahome.com.vn/wp-content/uploads/2023/03/1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="project-content">
+            <h6>BIỆT THỰ 12X25M ANH HOÀNG – NINH BÌNH</h6>
+            <p>Biệt Thự</p>
+          </div>
+          <!-- tạo đường line ở đây -->
+          <div class="line"></div>
+        </div>
+        <!-- 5  -->
+        <div class="project-item col-3">
+          <div class="project-img">
+            <div class="mask-img">
+              <img
+                src="https://avahome.com.vn/wp-content/uploads/2021/12/1-2.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="project-content">
+            <h6>BIỆT THỰ 12X25M ANH HOÀNG – NINH BÌNH</h6>
+            <p>Biệt Thự</p>
+          </div>
+          <!-- tạo đường line ở đây -->
+          <div class="line"></div>
+        </div>
+        <!-- 6 -->
+        <div class="project-item col-3">
+          <div class="project-img">
+            <div class="mask-img">
+              <img
+                src="https://avahome.com.vn/wp-content/uploads/2021/10/KT-1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="project-content">
+            <h6>BIỆT THỰ 12X25M ANH HOÀNG – NINH BÌNH</h6>
+            <p>Biệt Thự</p>
+          </div>
+          <!-- tạo đường line ở đây -->
+          <div class="line"></div>
+        </div>
+        <!-- 7 -->
+        <div class="project-item col-3">
+          <div class="project-img">
+            <div class="mask-img">
+              <img
+                src="https://avahome.com.vn/wp-content/uploads/2021/08/A-3-1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="project-content">
+            <h6>BIỆT THỰ 12X25M ANH HOÀNG – NINH BÌNH</h6>
+            <p>Biệt Thự</p>
+          </div>
+          <!-- tạo đường line ở đây -->
+          <div class="line"></div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // tạo function truyền tham trị
+      function myFunction(tt, tt2) {
+        console.log(tt);
+        console.log(`wew ${tt2}`);
+      }
+      myFunction("hello world", "hello world 2");
+
+      let slideIndex = 1;
+      let slideInterval;
+
+      function autoSlide() {
+        plusSlides(1);
+      }
+
+      function startAutoSlide() {
+        slideInterval = setInterval(autoSlide, 9000); // Auto slide every 3 seconds
+      }
+
+      function stopAutoSlide() {
+        clearInterval(slideInterval);
+      }
+
+      function plusSlides(n) {
+        stopAutoSlide();
+        showSlides((slideIndex += n));
+        startAutoSlide();
+      }
+
+      function currentSlide(n) {
+        stopAutoSlide();
+        showSlides((slideIndex = n));
+        startAutoSlide();
+      }
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+          slides[i].classList.remove(
+            "fade"
+          ); /* Xóa class "fade" trước khi ẩn slide */
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        slides[slideIndex - 1].classList.add(
+          "fade"
+        ); /* Thêm class "fade" khi hiển thị slide */
+        dots[slideIndex - 1].className += " active";
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        showSlides(slideIndex);
+        startAutoSlide();
+      });
+
+      // fixxed;
+      // Lấy thẻ header
+      const header = document.querySelector(".header__container");
+
+      // Kích hoạt khi cuộn trang
+      function checkScrollPosition() {
+        if (window.scrollY >= 600) {
+          header.classList.add("sticky");
+          console.log("adđhello");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+
+      // Gọi hàm kiểm tra khi tải trang
+      checkScrollPosition();
+
+      // Lắng nghe sự kiện scroll
+      window.addEventListener("scroll", checkScrollPosition);
+      // tính toán sự ẩn hiện
+      const projectItems = document.querySelectorAll(".project-item");
+
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight)
+        );
+      }
+
+      function handleScroll() {
+        projectItems.forEach((item) => {
+          if (isInViewport(item)) {
+            item.classList.add("show");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", handleScroll);
+
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 50 && // Khi mục cách 100px phía dưới màn hình
+          rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight)
+        );
+      }
+    </script>
+  </body>
+</html>

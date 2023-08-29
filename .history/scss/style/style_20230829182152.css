@@ -828,7 +828,7 @@ a.see-more:hover {
 
 /* /* tạo lớp giả  giúp tôi  */
 
-.list-project .project-itemm::before {
+.list-project .project-item::before {
   content: "";
   position: absolute;
   top: 0;

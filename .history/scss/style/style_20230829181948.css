@@ -739,14 +739,6 @@ a.see-more:hover {
   transition: opacity 0.6s ease;
   opacity: 0;
 }
-
-.list-project .project-item:hover::before {
-  opacity: 1;
-}
-
-.list-project .project-item:hover .project-content::before {
-  width: calc(100% - 40px);
-}
 /* v2  */
 .list-project {
   max-width: var(--container-width);
@@ -814,7 +806,7 @@ a.see-more:hover {
   text-transform: uppercase;
 }
 
-.list-project .project-item .project-content::before {
+.list-project .project-itemm .project-content::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -828,7 +820,7 @@ a.see-more:hover {
 
 /* /* tạo lớp giả  giúp tôi  */
 
-.list-project .project-itemm::before {
+.list-project .project-item::before {
   content: "";
   position: absolute;
   top: 0;
@@ -845,16 +837,14 @@ a.see-more:hover {
   transition: opacity 0.6s ease;
   opacity: 0;
 }
-
-.list-project .project-itemm:hover::before {
+/* end  */
+.list-project .project-item:hover::before {
   opacity: 1;
 }
 
-.list-project .project-itemm:hover .project-content::before {
+.list-project .project-item:hover .project-content::before {
   width: calc(100% - 40px);
 }
-/* end  */
-
 /* đoạn css để nó hiện lên từ từ  */
 .project-item {
   opacity: 0;
