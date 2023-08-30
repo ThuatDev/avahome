@@ -43,9 +43,9 @@
     left: 2%;
   }
   /* set h cho about  */
-  .home-sec-2-about {
+  /* .home-sec-2-about {
     height: 453px;
-  }
+  } */
   /* css 3img  */
   .onhover {
     height: 1110px;
@@ -91,8 +91,8 @@
     display: flex;
   }
   .list-img .img-item {
-    width: 126px;
-    height: 185px;
+    /* width: 126px;
+    height: 185px; */
     overflow: hidden;
   }
   /* 4 row price  */
