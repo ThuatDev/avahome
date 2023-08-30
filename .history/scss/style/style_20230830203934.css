@@ -218,6 +218,42 @@ img {
   display: block;
 }
 /* slider  */
+.mySlides {
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  visibility: hidden;
+}
+
+.mySlides.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mySlides img {
+  width: 100%;
+  height: 640px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+
+.mySlides.active img {
+  opacity: 1;
+}
+
+.list-dot {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 999;
+}
+
 .dot {
   cursor: pointer;
   height: 10px;
@@ -226,23 +262,8 @@ img {
   border: 2px solid #ffffff;
   border-radius: 50%;
   display: inline-block;
+  background-color: transparent;
   transition: background-color 0.6s ease;
-}
-.mySlides img {
-  width: 100%;
-  height: 640px;
-  object-fit: cover;
-  position: relative;
-  display: block;
-    transition: opacity 0.6s ease;
-}
-.list-dot {
-  position: absolute;
-  bottom: 10%;
-   left: 50%;
-    transform: translateX(-50%);
-  width: 100%;
-  z-index: 999;
 }
 
 .active,
@@ -253,19 +274,17 @@ img {
 /* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 0.3s;
-  animation-timing-function: ease-in-out; /* Thêm timing function */
-    animation-fill-mode: both;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
 }
 
 @keyframes fade {
   0% {
-    opacity: 0.4;
-    transform: translateX(-100%); /* Bắt đầu từ vị trí bên ngoài màn hình */
+    opacity: 0;
   }
   100% {
     opacity: 1;
-    transform: translateX(0); /* Di chuyển vào màn hình */
   }
 }
 

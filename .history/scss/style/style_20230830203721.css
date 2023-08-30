@@ -255,7 +255,6 @@ img {
   animation-name: fade;
   animation-duration: 0.3s;
   animation-timing-function: ease-in-out; /* Thêm timing function */
-    animation-fill-mode: both;
 }
 
 @keyframes fade {
