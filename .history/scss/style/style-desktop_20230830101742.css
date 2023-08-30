@@ -1,0 +1,54 @@
+.container-fluid {
+  width: 98%;
+}
+.header__menu ul li {
+  padding: 0px 24px;
+}
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.mySlides .content-img {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.mySlides .content-img-item2 {
+  position: absolute;
+  top: 50%;
+  /* bottom: 30%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+
+  text-align: center;
+}
+.pss-prev,
+.pss-next {
+  top: 50%;
+}
+
+.section-content .col-inner {
+  max-width: var(--container-width);
+  margin: 0px auto;
+  position: absolute;
+  top: 64%;
+  left: 2%;
+}
+/* css 3img  */
+.onhover {
+  height: 1110px;
+}
+.sec-3-col {
+  height: 1110px;
+  /* /* tạo lớp mờ giúp tôi  */
+}
+.sec-3-col img:hover {
+  height: 1110px;
+  /* /* tạo lớp mờ giúp tôi  */
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}

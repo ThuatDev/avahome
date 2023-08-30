@@ -1,0 +1,128 @@
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* CSS cho màn hình desktop */
+  :root {
+    --container-width: 1080px;
+  }
+  .container-fluid {
+    width: 98%;
+  }
+  .header__menu ul li {
+    padding: 0px 24px;
+  }
+  .slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+  }
+  .mySlides .content-img {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .mySlides .content-img-item2 {
+    position: absolute;
+    top: 50%;
+    /* bottom: 30%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+
+    text-align: center;
+  }
+  .pss-prev,
+  .pss-next {
+    top: 50%;
+  }
+
+  .section-content .col-inner {
+    max-width: var(--container-width);
+    margin: 0px auto;
+    position: absolute;
+    top: 64%;
+    left: 2%;
+  }
+  /* set h cho about  */
+  .home-sec-2-about {
+    height: 453px;
+  }
+  /* css 3img  */
+  .onhover {
+    height: 1110px;
+  }
+  .sec-3-col {
+    height: 1110px;
+    /* /* tạo lớp mờ giúp tôi  */
+  }
+  .sec-3-col img {
+    height: 1110px;
+    /* /* tạo lớp mờ giúp tôi  */
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+  }
+  .image-overlay {
+    width: 56%;
+  }
+  /* css section skill  */
+  .skill-sec {
+    height: 1110px;
+  }
+  .skill-container {
+    max-width: var(--container-width);
+  }
+  .list-skill .skill-title {
+    width: 100%;
+    /* height: 100%; */
+
+    top: 78%;
+  }
+  .list-skill .skill-title h1 {
+    width: 100%;
+  }
+  .list-skill .skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 65px;
+  }
+  /* css section avatar  */
+  .list-img {
+    margin: 100px 0 60px 0;
+    display: flex;
+  }
+  .list-img .img-item {
+    width: 126px;
+    height: 185px;
+    overflow: hidden;
+  }
+  /* 4 row price  */
+  .product-col-price .product-inner {
+    margin-top: 40px;
+    border: 1px solid #ebebeb;
+    padding: 0 6px;
+    padding-bottom: 34px;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+  }
+  .product-col-price .product-inner .product-description-1 {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+  /* css section project  */
+  footer .row-4 .list-img-footer .footer__content--right--item-2--img--item {
+    width: 61px;
+    height: 61px;
+  }
+  /* css row-2  */
+  .footer__content .row-2 p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding-right: 6px;
+  }
+  .header__container .header__menu ul {
+    flex-direction: row;
+  }
+}

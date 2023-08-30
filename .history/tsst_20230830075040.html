@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Menu Example</title>
+    <style>
+      /* Reset some default styles */
+
+      .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: -250px; /* Start hidden outside the viewport */
+        width: 250px;
+        height: 100%;
+        background-color: #333;
+
+        transition: left 0.3s ease;
+      }
+
+      .menu-list li {
+        margin-bottom: 10px;
+      }
+
+      .menu-list a {
+        color: rgb(247, 22, 22);
+        text-decoration: none;
+        font-size: 1.2em;
+        transition: color 0.2s;
+      }
+
+      .menu-list a:hover {
+        color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mobile-menu">
+      <button class="menu-toggle">☰</button>
+      <ul class="menu-list">
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="#">Dự án</a></li>
+        <li><a href="#">Công trình thực tế</a></li>
+        <li><a href="#">Bảng giá</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </div>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const mobileMenu = document.querySelector(".mobile-menu");
+
+      menuToggle.addEventListener("click", function () {
+        mobileMenu.style.left =
+          mobileMenu.style.left === "-250px" ? "0" : "-250px";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+@media screen and (max-width: 480px) {
+  /* Đây là phần CSS dành cho độ rộng màn hình nhỏ hơn hoặc bằng 480px (điện thoại) */
+  .menu-toggle {
+    position: absolute;
+    top: 40%;
+    right: 5%;
+
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #000;
+    z-index: 9999;
+    display: block;
+  }
+  .header__container .header__menu .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 70%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 999;
+    /* transform: translateX(-100%); */
+    left: -300px;
+    /* display: none; */
+    align-items: start;
+    transition: all 0.3s ease;
+    height: 1000px;
+
+    align-items: left;
+    /* fix cứng màng hì không cho lướt  */
+    overflow-y: scroll;
+    /* ý là khi nó hiện ra  */
+    overflow-y: hidden;
+  }
+  .header__container .header__logo {
+    width: 100%;
+    /* text-align: center; */
+    margin-top: 20px;
+    margin: 0 auto;
+  }
+  .header__container .header__logo img {
+    margin: 0 auto;
+  }
+  .header__container .header__menu ul li a {
+    padding: 0px 24px;
+    margin-top: 20px;
+    color: #000;
+
+    text-align: left;
+  }
+  .header__container .header__menu ul li {
+    line-height: 1.6;
+    padding: 10px 0px;
+    width: 100%;
+  }
+  .header__container .header__menu ul li:hover {
+    background-color: #f5f5f5;
+  }
+  .header__container .header__menu .nav-top-link .fa-search {
+    display: none;
+  }
+  .content-img h1 {
+    font-size: 2.5rem;
+  }
+  .list-dot {
+    position: absolute;
+    bottom: 13%;
+    width: 100%;
+    z-index: 999;
+  }
+  .section-content .col-inner {
+    position: initial;
+    margin-bottom: 50px;
+    padding-bottom: 0;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0px;
+    margin-left: 15px;
+  }
+  .section-content .col-inner p span {
+    font-size: 1.25rem;
+    /* font-weight: 700; */
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  .col-inner p {
+    margin-bottom: 1rem;
+  }
+  .home-sec-2-about {
+    height: auto;
+  }
+  /* 3item-img  */
+  .onhover {
+    display: flex;
+    flex-direction: column;
+  }
+  .onhover .sec-3-col.active {
+    /* flex: 0 0 33.3%; */
+    /* max-width: 33%; */
+  }
+}

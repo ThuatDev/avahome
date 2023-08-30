@@ -1,0 +1,20 @@
+.container-fluid {
+  width: 98%;
+}
+.header__menu ul li {
+  padding: 0px 24px;
+}
+.mySlides .content-img-item2 {
+  /* canh vào giữa ảnh  */
+  margin: auto;
+  /* canh vào giữa ảnh  */
+  display: block;
+  /* canh vào giữa ảnh  */
+  width: 100%;
+  /* canh vào giữa ảnh  */
+  height: 100%;
+  /* canh vào giữa ảnh  */
+  object-fit: cover;
+  /* canh vào giữa ảnh  */
+  object-position: center;
+}

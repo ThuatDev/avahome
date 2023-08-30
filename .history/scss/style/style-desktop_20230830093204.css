@@ -1,0 +1,29 @@
+.container-fluid {
+  width: 98%;
+}
+.header__menu ul li {
+  padding: 0px 24px;
+}
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.mySlides .content-img-item2:nth-child(1) {
+  position: absolute;
+  top: 60%;
+  /* bottom: 30%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+
+  text-align: center;
+}
+.mySlides .content-img-item2 {
+  position: absolute;
+  top: 50%;
+  /* bottom: 30%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+
+  text-align: center;
+}

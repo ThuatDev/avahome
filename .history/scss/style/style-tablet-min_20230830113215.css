@@ -1,0 +1,8 @@
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .product-col-price .product-inner .product-price p {
+    font-size: 1.5rem;
+  }
+  .product-col-price .product-inner .product-button {
+    padding: 3% 8%;
+  }
+}

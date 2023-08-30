@@ -1,0 +1,15 @@
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .product-col-price .product-inner .product-price p {
+    font-size: 1.5rem;
+  }
+  .product-col-price .product-inner .product-button {
+    padding: 3% 8%;
+  }
+  .product-col-price .product-inner .product-description-2 p {
+    /* giới hạn text 4 dòng */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}

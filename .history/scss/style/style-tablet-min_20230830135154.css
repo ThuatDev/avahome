@@ -1,0 +1,179 @@
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .product-col-price .product-inner .product-price p {
+    font-size: 1.5rem;
+  }
+  .product-col-price .product-inner .product-button {
+    padding: 3% 8%;
+  }
+  .product-col-price .product-inner .product-description-2 p {
+    /* giới hạn text 4 dòng */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  footer .row-4 .list-img-footer .footer__content--right--item-2--img--item {
+    width: 48px;
+    height: 48px;
+  }
+  .footer__content--left--logo {
+    width: 116px;
+    height: 81px;
+  }
+  .footer__content .row-2 .footer__content--left--item {
+    padding-left: 5px;
+  }
+  .footer__content .row-3 .footer__content--right--item-1 {
+    margin-top: 44px;
+    padding-right: 5px;
+  }
+
+  .skill-container {
+    max-width: 100%;
+  }
+  .list-skill .skill-title {
+    width: 100%;
+    /* height: 100%; */
+
+    top: 80%;
+  }
+  .skill-container {
+    max-width: 100%;
+    padding-bottom: 50px;
+  }
+  .list-skill .skill-title h1 {
+    width: 100%;
+    font-size: 2.5rem;
+  }
+  .section-content .col-inner p {
+    /* max-width: var(--container-width); */
+    /* loại bỏ dii postion apsolus  */
+
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    width: 100%;
+    margin-left: 0;
+  }
+  .section-content .col-inner {
+    left: 5%;
+    top: 100%;
+  }
+  /* nav  */
+  /* Header Styles */
+  .header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .header__logo img {
+    height: 90px;
+    /* width: 90px; */
+  }
+
+  /* Mobile Menu Styles */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9998;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+    z-index: 9999;
+  }
+  .header__logo {
+    margin: 0 auto;
+
+    width: 10px;
+    /* padding-right: 0px; */
+  }
+  .logo-stiky {
+    align-items: center;
+  }
+
+  .menu-toggle:hover {
+    color: #000;
+  }
+
+  .menu-toggle:focus {
+    outline: none;
+  }
+
+  .mobile-menu ul {
+    list-style: none;
+    margin-top: 1rem;
+  }
+
+  .mobile-menu ul li a {
+    display: block;
+    padding: 1rem;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .mobile-menu ul li a:hover,
+  .mobile-menu ul li a:focus {
+    color: #000;
+    background-color: #f6f6f6;
+  }
+
+  .sub-menu-1 {
+    display: none;
+  }
+
+  .sub-menu-1.active {
+    display: block;
+  }
+
+  .dow i {
+    float: right;
+  }
+  /* CSS hiện overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
+    z-index: 9997; /* Đảm bảo overlay hiển thị phía trên menu mobile */
+    display: none; /* Mặc định ẩn overlay */
+  }
+
+  /* CSS hiện overlay khi menu mobile được mở */
+  .mobile-menu.active + .overlay {
+    display: block; /* Hiển thị overlay khi menu mobile có class "active" */
+  }
+  .nav-ng {
+    display: block;
+  }
+  header {
+    display: none;
+  }
+}
