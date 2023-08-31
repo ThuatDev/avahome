@@ -1,0 +1,785 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+/* font famylyu  */
+* {
+  font-family: "Roboto", sans-serif;
+}
+body *:not(i) {
+  font-family: "Roboto", sans-serif;
+}
+:root {
+  --container-width: 1080px;
+}
+img {
+  display: block;
+}
+/* css header */
+.header__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 999;
+  /* tạo cảm giác mượt mà trượt từ trên xuống  */
+  transition: all 0.3s ease;
+}
+
+.container-fluid {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: flex;
+  height: 90px;
+  /* border-bottom: 1px solid #c4c4c4; */
+}
+.nav-ng {
+  display: none;
+}
+.header__logo {
+  width: 200px;
+  padding-right: 30px;
+}
+.header__logo .logo-stiky {
+  /* ẩn ddii và khi hiện lên mượt mà  */
+  opacity: 0;
+
+  transition: all 0.3s ease;
+}
+.header__logo img {
+  max-height: 90px;
+  display: block;
+}
+.menu-toggle {
+  display: none;
+}
+.header__menu ul {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-flow: row wrap;
+
+  height: 100%;
+  line-height: 1.6;
+}
+.header__menu ul li {
+  padding: 0 32px;
+}
+.header__menu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+}
+.header__menu ul li a:hover {
+  color: #fa4d09;
+}
+/* submenu  */
+.header__menu #sub-menu-parent-1 {
+  position: relative;
+}
+.header__menu #sub-menu-parent-1 .sub-menu-1 {
+  margin-top: 10px;
+  position: absolute;
+  top: 100%;
+  left: 3px;
+  width: 220px;
+  height: auto;
+  background-color: #ffffff;
+  padding: 15px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+.header__menu #sub-menu-parent-1 .sub-menu-1 li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #ebebeb;
+  list-style: none;
+  text-align: left;
+}
+.header__menu #sub-menu-parent-1 .sub-menu-1 li:last-child {
+  border-bottom: none;
+}
+.header__menu #sub-menu-parent-1 .sub-menu-1 li a {
+  color: #888787;
+}
+/* khi hover vào thẻ cha thì thẻ con sẽ hiện ra */
+.header__menu #sub-menu-parent-1:hover .sub-menu-1 {
+  display: block;
+}
+/* css để có 1 tam giác nối vs thẻ cha và con  */
+.header__menu #sub-menu-parent-1 .sub-menu-1::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 45px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  border-bottom: 10px solid #ffffff;
+}
+.header__menu #sub-menu-parent-1 .sub-menu-1 li a:hover {
+  color: #fa4d09;
+}
+/* css input search  */
+.header__menu ul li:last-child {
+  padding: 0;
+
+  padding-top: 5px;
+  position: relative;
+}
+.header__menu ul li:last-child a i {
+  font-size: 1.1rem;
+}
+.header__menu ul li:last-child .search-box {
+  position: absolute;
+  top: 100%;
+  right: -16px;
+  width: 260px;
+  height: auto;
+  background-color: #ffffff;
+  padding: 20px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 4px;
+  display: none;
+}
+/* tạo tam giác nối vs thẻ cha và con  */
+.header__menu ul li:last-child .search-box::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  border-bottom: 10px solid #ffffff;
+}
+/* cho ô input và icon search nằm cạnh nhau  cung 1 hàng  */
+.header__menu ul li:last-child .search-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__menu ul li:last-child .search-box input[type="submit"] {
+  color: #ffffff;
+  border: none;
+  padding: 0 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.header__menu ul li:last-child .search-box i {
+  height: 30px;
+  width: 30px;
+  /* width: 40px; */
+  font-size: 1.1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888787;
+  cursor: pointer;
+}
+.header__menu ul li:last-child .search-box button {
+  height: 39px;
+  width: 48px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888787;
+  cursor: pointer;
+  border: none;
+  background-color: #c74b1a;
+}
+.header__menu ul li:last-child .search-box button i {
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+.header__menu ul li:last-child .search-box input {
+  width: 100%;
+  height: 38px;
+  border: 1px solid #ebebeb;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 0 10px;
+}
+
+.header__menu ul li:last-child .search-box input:focus {
+}
+/* khi hover vào thẻ cha thì thẻ con sẽ hiện ra */
+.header__menu ul li:last-child:hover .search-box {
+  display: block;
+}
+.banner__img {
+  width: 100%;
+  height: 500px;
+}
+
+/* css banner  */
+.banner__img {
+  position: relative;
+}
+.banner__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* object-position: center; */
+  display: block;
+}
+.banner__content .banner__content__title {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-align: center;
+}
+.banner__content .banner__content__title h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+.banner__content .banner__content__title h1 span {
+  color: #fa4d09;
+}
+
+.banner__content__title__icon {
+  display: flex;
+  justify-content: center;
+}
+.banner__content__title__icon i {
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.banner__content__title__icon i:hover {
+  color: #fa4d09;
+}
+.banner__content__title__icon p {
+  /* text-transform: uppercase; */
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.list-project-page {
+  max-width: var(--container-width);
+  margin: 50px auto;
+}
+.list-project-page .title-project h2 {
+  font-size: 2.8rem;
+
+  text-transform: uppercase;
+  margin-bottom: 30px;
+
+  text-align: center;
+}
+
+/* css cho code js router  */
+.list-project ul {
+  list-style: none;
+}
+
+.tabs {
+  /* max-width: 80%;
+  margin: 30px auto; */
+}
+
+.tabs ul {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.tabs ul li > * {
+  color: #535252;
+  display: block;
+  text-decoration: none;
+  /* background: #efefef; */
+  padding: 15px 20px;
+  font-weight: 600;
+}
+
+.tabs ul li.active > * {
+  background: green;
+  color: #fff;
+}
+
+.tabs .tabs__content {
+  padding: 10px 10px;
+
+}
+
+.tabs .tabs__content .tabs--panel {
+  opacity: 0;
+  transition-property: opacity, visibility;
+  transition-timing-function: linear;
+  display: none;
+}
+
+.tabs .tabs__content .tabs--panel.active {
+  opacity: 1;
+}
+
+.tabs .tabs__content .tabs--panel.show {
+  display: block;
+}
+/* css cho lisst projec  */
+.list-project {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: grid; /* sử dụng CSS Grid */
+  grid-template-columns: repeat(3, 1fr); /* ba cột có chiều rộng bằng nhau */
+  /* /* khi nó ở mobi thiif 2 cột tạo giúp tôi  */
+
+  grid-gap: 20px; /
+}
+
+.list-project .project-item {
+  position: relative;
+  overflow: hidden;
+}
+.list-project .project-item .project-img {
+  width: 346px;
+  height: 337px;
+}
+.list-project .project-item .project-img img {
+  width: 100%;
+  height: 337px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.list-project .project-item:hover img {
+  transform: scale(1.1);
+}
+
+.list-project .project-item .project-content {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  transition: opacity 0.6s ease;
+  z-index: 2;
+  padding: 20px;
+  padding-bottom: 30px;
+}
+
+.list-project .project-item:hover .project-content p {
+  opacity: 1;
+}
+
+.list-project .project-item .project-content h6 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+}
+
+.list-project .project-item .project-content p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  /* chữ in hoa */
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+.list-project .project-item .project-content::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-30%);
+  width: 0;
+  height: 3px;
+  background-color: #fa4d09;
+  transition: width 0.6s ease;
+}
+
+.list-project .project-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* không cho nó tràn ra ngoài */
+  /* tính toán lại  width height:   */
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 10px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  /* tạo sự mượt mà khi hiện lên  */
+  transition: opacity 0.6s ease;
+  opacity: 0;
+}
+
+.list-project .project-item:hover::before {
+  opacity: 1;
+}
+
+.list-project .project-item:hover .project-content::before {
+  width: calc(100% - 40px);
+}
+/* v2  */
+.list-project {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: grid; /* sử dụng CSS Grid */
+  grid-template-columns: repeat(3, 1fr); /* ba cột có chiều rộng bằng nhau */
+  grid-gap: 20px; /* khoảng cách giữa các phần tử con */
+}
+
+.list-project .project-itemm {
+  position: relative;
+  overflow: hidden;
+}
+.list-project .project-itemm .project-img {
+  width: 346px;
+  height: 337px;
+}
+.list-project .project-itemm .project-img img {
+  width: 100%;
+  height: 337px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.list-project .project-itemm:hover img {
+  transform: scale(1.1);
+}
+
+.list-project .project-itemm .project-content {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  z-index: 2;
+  padding: 20px;
+  padding-bottom: 30px;
+}
+
+.list-project .project-itemm:hover .project-content {
+  opacity: 1;
+}
+
+.list-project .project-itemm .project-content h6 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+}
+
+.list-project .project-itemm .project-content p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  /* chữ in hoa */
+  text-transform: uppercase;
+}
+
+.list-project .project-item .project-content::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-30%);
+  width: 0;
+  height: 3px;
+  background-color: #fa4d09;
+  transition: width 0.6 s ease ;
+}
+
+.list-project .project-itemm::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* không cho nó tràn ra ngoài */
+  /* tính toán lại  width height:   */
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 10px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  /* tạo sự mượt mà khi hiện lên  */
+  transition: opacity 0.6s ease;
+  opacity: 0;
+}
+
+.list-project .project-itemm:hover::before {
+  opacity: 1;
+}
+
+.list-project .project-itemm:hover .project-content::before {
+  width: calc(100% - 40px);
+}
+/* end  */
+
+/* đoạn css để nó hiện lên từ từ  */
+.project-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 3s ease, transform 1s ease; /* Điều chỉnh thời gian chuyển đổi ở đây */
+}
+
+.project-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* v2  */
+.project-itemm {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 3s ease, transform 1s ease; /* Điều chỉnh thời gian chuyển đổi ở đây */
+}
+
+.project-itemm.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* css  */
+/* footer  */
+.footer__container {
+  background-color: rgba(40, 40, 40, 1);
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+.footer__container h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+
+  color: #ffffff;
+  /* font-family: "Raleway", sans-serif; */
+}
+.footer__container p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+.footer__bottom p {
+  color: #ccc;
+}
+.footer__container .footer__content {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  /* sẽ xuống dòng nếu bị tràng   */
+
+  /* xuống hàng ở màn hình nhỏ  */
+
+  justify-content: space-between;
+}
+footer .col-3 {
+  /* Dùng hệ lưới trục 12 cột nên lấy flex-parent / 12 */
+  width: calc(3 * 100% / 12);
+  box-sizing: border-box;
+  padding: 12px;
+  /* border: 1px solid blue !important; */
+}
+.footer__content--left--logo {
+  width: 240px;
+  height: 167px;
+}
+.footer__content--left--logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* css row-1  */
+.footer__content .row-1 {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 20px 0;
+}
+.footer__content .row-1 .footer__content--left--introduce {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 0;
+}
+.footer__content .row-1 .footer__content--left--icon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 30px;
+}
+.footer__content .row-1 .footer__content--left--icon i {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+/* css row-2  */
+.footer__content .row-2 h3 {
+  margin-bottom: 50px;
+}
+.footer__content .row-2 .footer__content--left--item {
+  padding-left: 40px;
+}
+.footer__content .row-2 p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+
+  padding-right: 10px;
+}
+/* css row-3   */
+.footer__content .row-3 .footer__content--right--item-1 {
+  margin-top: 44px;
+}
+.footer__content .row-3 .footer__content--right--item-1 p {
+  line-height: 1.6;
+  padding: 5px 0;
+}
+/* css row 4  */
+.footer__content .row-4 .footer__content--right--item-2 h3 {
+  margin-bottom: 50px;
+}
+/* css 9img  */
+footer .row-4 .list-img-footer .footer__content--right--item-2--img {
+  width: 100%;
+  height: 100%;
+}
+footer .row-4 .list-img-footer .footer__content--right--item-2--img--item {
+  max-width: 67px;
+  max-height: 67px;
+  display: block;
+  overflow: hidden;
+}
+footer .row-4 .list-img-footer .footer__content--right--item-2--img--item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+footer .row-4 .list-img-footer .footer__content--right--item-2--img {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+}
+/* css row 5  */
+footer .footer__bottom {
+}
+footer .footer__bottom .footer__bottom--line {
+  border-bottom: 0.3px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 10px;
+  margin-top: 60px;
+}
+footer .footer__bottom p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #ccc;
+  text-align: center;
+}
+footer .footer__bottom .footer__bottom--text p strong {
+  font-weight: 600;
+}
+/* hiệu ứng header  */
+.sticky .container-fluid {
+  height: 70px;
+  border: none;
+}
+
+.sticky .header__logo .logo-base {
+  /* opacity: 0; */
+  display: none;
+  transition: opacity 0.5s ease;
+}
+.sticky .header__logo .logo-stiky {
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+.sticky .header__logo .logo-stiky {
+  height: 70px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  /* Tạo màu xám mờ */
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.8)
+  );
+  /* Tạo đổ bóng */
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+  animation: slideDown 0.5s ease;
+}
+
+.sticky.show {
+  top: 0;
+}
+
+.sticky .header__logo .logo-sticky {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.sticky .header__menu ul li a {
+  color: #000000;
+}
+/* đoạn css để nó hiện lên từ từ  */
+.project-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 3s ease, transform 1s ease; /* Điều chỉnh thời gian chuyển đổi ở đây */
+}
+
+.project-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}.project-itemm {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 3s ease, transform 1s ease; /* Điều chỉnh thời gian chuyển đổi ở đây */
+}
+
+.project-itemm.show {
+  opacity: 1;
+  transform: translateY(0);
+}
