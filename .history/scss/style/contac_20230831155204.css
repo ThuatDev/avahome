@@ -1,0 +1,16 @@
+.letter {
+  display: inline-block; /* Hiển thị theo dạng khối */
+  /* Kích thước chữ */
+  margin-top: 0;
+  font-weight: bold; /* Độ đậm chữ */
+  /* Khoảng cách đối với các chữ cái kế bên nhau */
+  font-size: 13.0225vw;
+  line-height: 1;
+  width: 20%;
+  text-align: center;
+  white-space: nowrap;
+  color: #f1f1f1;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
