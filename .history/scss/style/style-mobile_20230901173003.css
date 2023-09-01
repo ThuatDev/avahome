@@ -495,10 +495,4 @@
   .container-fluid {
     width: 100%;
   }
-  .header__container .header__logo {
-    width: 100%;
-  }
-  .header__container .header__logo {
-    padding-right: 0;
-  }
 }

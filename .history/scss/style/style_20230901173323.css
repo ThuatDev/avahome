@@ -427,7 +427,7 @@ img {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
- a {
+  button {
   cursor: pointer;
 }
 /* Áp dụng kiểu cho phần tử p có class "uppercase why" */
@@ -1259,7 +1259,4 @@ footer .footer__bottom p {
 }
 footer .footer__bottom .footer__bottom--text p strong {
   font-weight: 600;
-}
-.footer__content--right--item-1 p{
-  cursor: pointer;
 }
